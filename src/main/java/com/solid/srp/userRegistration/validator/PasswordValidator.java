@@ -1,7 +1,10 @@
 package com.solid.srp.userRegistration.validator;
 
+import jakarta.enterprise.context.ApplicationScoped;
+
 import java.util.regex.Pattern;
 
+@ApplicationScoped
 public class PasswordValidator {
 
     private static final String PASSWORD_REGEX = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$";
