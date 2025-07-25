@@ -23,6 +23,9 @@ dependencies {
     implementation 'io.quarkus:quarkus-jdbc-postgresql'
     implementation 'io.quarkus:quarkus-rest-jackson'
     implementation 'io.quarkus:quarkus-rest-jsonb'
+    implementation 'io.quarkus:quarkus-mailer'
+    implementation 'io.quarkiverse.mailpit:quarkus-mailpit:1.6.4'
+    testImplementation 'io.quarkiverse.mailpit:quarkus-mailpit-testing:1.6.4'
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
 }

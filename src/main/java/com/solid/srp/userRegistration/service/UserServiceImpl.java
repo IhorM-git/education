@@ -15,11 +15,14 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper;
     @Inject
     UserValidator userValidator;
+    @Inject
+    EmailService emailService;
 
     public Boolean registerUser(UserDTO userDTO) {
         try {
             if (!userValidator.validate(userDTO)) return false;
             userRepository.create(userMapper.toEntity(userDTO));
+            emailService.send(userDTO.getEmail());
             return true;
         } catch (Exception e) {
             throw new RuntimeException(e);
