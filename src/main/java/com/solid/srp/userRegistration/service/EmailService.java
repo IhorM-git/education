@@ -4,9 +4,11 @@ import io.quarkus.mailer.Mail;
 import io.quarkus.mailer.Mailer;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 @ApplicationScoped
-public class EmailService {
+@Named("email")
+public class EmailService implements NotificationService {
 
     @Inject
     Mailer mailer;

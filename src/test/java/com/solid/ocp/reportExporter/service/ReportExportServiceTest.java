@@ -35,4 +35,13 @@ class ReportExportServiceTest {
         expectedFile.delete();
     }
 
+    @Test
+    void testExportReportShouldExportXmlReport() throws IOException {
+        ReportDTO reportDTO = new ReportDTO("test", "test", "xml");
+        service.exportReport(reportDTO);
+        File expectedFile = new File(String.valueOf(Paths.get(reportDTO.getName() + "." + reportDTO.getType())));
+        assertTrue(expectedFile.exists());
+        expectedFile.delete();
+    }
+
 }
