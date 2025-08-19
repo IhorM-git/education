@@ -29,6 +29,8 @@ dependencies {
     testImplementation 'io.quarkiverse.mailpit:quarkus-mailpit-testing:1.6.4'
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
+    testImplementation "org.testcontainers:kafka"
+    testImplementation "org.testcontainers:junit-jupiter"
 }
 
 group 'com.example'
