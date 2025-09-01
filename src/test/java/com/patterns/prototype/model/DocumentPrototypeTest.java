@@ -21,7 +21,7 @@ class DocumentPrototypeTest {
 
         Document copy = (Document) original.clone();
 
-        assertNotSame(original, copy); // це новий об’єкт
+        assertNotSame(original, copy);
         assertEquals(original.getTitle(), copy.getTitle());
         assertEquals(original.getContent(), copy.getContent());
         assertEquals(original.getImages(), copy.getImages());
